@@ -1,0 +1,73 @@
+.accounts{
+    width: 70%;
+    height: 100px;
+    margin-right: 15%
+}
+.accounts-btn-icon{
+    width: 32%;
+    height: 130px;
+    background-color: #131428;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    border-radius: 45px 45px 0 0;
+    align-items: center;
+}
+
+.accounts-btn-icon button{
+    width: 260px;
+    height: 50px;
+    background-color: #17172D;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #16C8E4;
+    justify-content: space-between;
+}
+
+.modal.modal--is-open-account{
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: max-content;
+    padding: 0px 0 45px 0;
+    background-color: #131428;
+    border-radius: 30px;
+    margin-left: 27%;
+    margin-top: 3%;
+    z-index: 2;
+  }
+
+  .account-create{
+    width: 400px;
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    background-color: #201D37;
+    border-radius: 75px;
+    padding: 0px 0px 12px 31px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 50px
+  }
+
+  .account-select{
+    
+    width: 400px;
+    height: 50px;
+    color: #076574;
+    font-size: 17px;
+    background-color: #1a3047;
+    border-radius: 75px;
+    padding: 0px 0px 12px 31px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  .account-text{
+
+  }

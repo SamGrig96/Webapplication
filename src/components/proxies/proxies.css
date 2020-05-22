@@ -1,0 +1,204 @@
+.proxies{
+    width: 75%;
+  height: 60px;
+  font-family: 'Segoe UI';
+  color: white;
+  position: absolute;
+  margin-left: 183px;
+  margin-bottom: 50px;
+  margin-top: 1%;
+  display: flex;
+}
+ 
+
+
+.proxi-btn{
+    width: 75%;
+    margin-left: 15%;
+    
+}
+
+.shopify{
+    width: 260px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #131428;
+    text-align: center;
+    border: none;
+    color: #16C8E4;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px 59px;
+    -webkit-appearance: none;
+}
+.shopify span{
+    border-radius: 25px;
+}
+
+.shopify-decoration{
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 7% center;
+    margin-right: 10px;
+}
+
+.proxies-btn{
+    width: 100px;
+    height: 50px;
+    margin-left: 42px;
+    padding-bottom: 4px;
+    border-radius: 25px 0px 0px 25px;
+    background-color: #1A3047;
+    border: none;
+    border-right: 1px solid black;
+}
+.proxiclose-btn{
+    width: 100px;
+    height: 50px;
+    padding-bottom: 10px;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #1A3047;
+    border: none;
+    padding-top: 15px;
+  
+}
+.plus{
+    width: 18px;
+    height: 18px;
+    color: #16C8E4;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+.proxilist{
+    width: 400px;
+    height: 50px;
+    border-radius: 25px;
+    background-color:#131428 ;
+    text-align: center;
+    align-items: center;
+    border: none;
+    color: #16C8E4;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 25px;
+    padding: 0px 59px;
+    -webkit-appearance: none;
+}
+
+.list-decoration{
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 91% center;
+    margin-right: 10px;
+}
+.proxi-btn-icon{
+    width: 65%;
+    height: 130px;
+    background-color: #131428;
+    margin: auto;
+    position: absolute;
+    bottom:0;
+    left: 25%;
+    border-radius: 45px 45px 0 0;
+    align-items: center;
+}
+
+.proxi-btn-icon button{
+    width: 260px;
+    height: 50px;
+    background-color: #17172D;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #16C8E4;
+    justify-content: space-between;
+    
+  }
+
+  .modal.modal--is-open-proxies{
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: max-content;
+    padding: 0px 0 45px 0;
+    background-color: #131428;
+    border-radius: 30px;
+    margin-left: 25%;
+    margin-top: 3%;
+    z-index: 2;
+  }
+
+  .create-proxies{
+    width: 400px;
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    background-color: #201D37;
+    border-radius: 75px;
+    padding: 0px 0px 12px 31px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 50px;
+
+  }
+
+  .import-proxies{
+    width: 400px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: #1a3047;
+    border-radius: 75px;
+    padding: 0px 0px 12px 31px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  .proxies-text{
+    width: 400px;
+    height:250px;
+    color: #076574;
+    font-size: 20px;
+    background-color: #201D37;
+    border-radius: 25px;
+    padding: 15px 0px 0px 15px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  .add-proxies{
+      width: 170px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: #1a3047;
+      border: none;
+      color:#16C8E4 ;
+      font-size: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: 50px;
+      margin-left: 50%;
+  }
+  .add-proxies img{
+      width: 15px;
+  }
+
+@media (max-width:682px){
+    .mobile-view{
+      display: none;
+    }
+    .proxilist{
+        width: 200px;
+    }
+    li{
+        display: block;
+    }
+    .proxies-btn{
+    display: block;
+    }
+  }
