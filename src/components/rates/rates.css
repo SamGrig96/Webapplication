@@ -1,0 +1,78 @@
+.rates-search {
+    width: 87%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #1a3047;
+    margin-top:5%;
+    margin-left: 9%;
+    border: none;
+    font-size: 20px;
+    padding-left: 50px;
+    color: #16C8E4;
+    background-image: url(../images/searchbg.png);
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    margin-right: 10px;
+}
+
+.rates-store-select-decoration {
+    width: 80%;
+    height: 50px;
+    margin-top:5%;
+    margin-left: 9%;
+    background-color: #201D37;
+    border: none;
+    border-radius: 25px;
+    -webkit-appearance: none;
+    color: #076574;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 0 0 31px;
+    background-image: url(../images/business.png),url(../images/arrowbg.png);
+    background-repeat: no-repeat,no-repeat;
+    background-position: 2% center,100% center;
+    background-size: 15px,50px;
+    margin-right: 10px;
+}
+.rates-profile-select-decoration{
+    width: 80%;
+    height: 50px;
+    margin-top:5%;
+    margin-left: 9%;
+    background-color: #201D37;
+    border: none;
+    border-radius: 25px;
+    -webkit-appearance: none;
+    color: #076574;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 0 0 31px;
+    background-image: url(../images/profile.png),url(../images/arrowbg.png);
+    background-repeat: no-repeat,no-repeat;
+    background-position: 2% center,100% center;
+    background-size: 15px,50px;
+    margin-right: 10px;  
+}
+
+.shipping-id {
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #1a3047;
+    margin-top:5%;
+    margin-left: 9%;
+    border: none;
+    font-size: 17px;
+    padding-left: 50px;
+    color: #16C8E4;
+}
+
+.rates-search {
+    width: 87%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 5%;
+    padding: 0 0 0 31px;
+    background-color: #201D37;
+}

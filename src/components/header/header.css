@@ -1,0 +1,16 @@
+.modal-notif{
+    display: none;
+}
+
+.modal-notif.modal--is-open-notif {
+    display: block;
+    position: absolute;
+    width: 850px;
+    height: max-content;
+    padding: 0px 0 45px 0;
+    background-color: #131428;
+    border-radius: 30px;
+    margin-left: -23%;
+    margin-top: 13%;
+    z-index: 2;
+}

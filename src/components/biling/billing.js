@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import '../../App.css';
 import './billing.css';
 import Switch from "react-switch";
+import FocusOnScroll from "react-focus-scroll";
+import Hedaer from '../header/header';
+
 
 class Billing extends React.Component {
   constructor(props) {
@@ -13,42 +16,38 @@ class Billing extends React.Component {
       isModalOpen: false,
       showModal: false,
       checked: false,
-      general:true
     }
-
     this.handleChange = this.handleChange.bind(this)
     this.handleChangeStyle = this.handleChangeStyle.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+
   }
+
+
+
 
   handleChange(checked) {
     this.setState({ checked });
   }
 
   handleChangeStyle() {
-    this.setState(state => ({
-      showStore: !state.showStore
-    }));
+    this.setState(state => ({ showStore: !state.showStore }));
   }
 
   openModal() {
     this.setState(state => ({ isModalOpen: !state.isModalOpen }));
-    this.setState(state => ({
-      showModal: !state.showModal
-    }));
+    this.setState(state => ({ showModal: !state.showModal }));
   }
 
   closeModal() {
     this.setState({ isModalOpen: false })
-    this.setState(state => ({
-      showModal: !state.showModal
-    }));
+    this.setState(state => ({ showModal: !state.showModal }));
   }
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <aside className="task">
           <img className="logo" src={require("../images/logo.png")} />
           <Link to='/'><p className="middle"><img src={require("../images/Grey/Group 409.png")} />Task</p></Link>
@@ -59,30 +58,11 @@ class Billing extends React.Component {
           <Link to='/settings'><p className="middle"><img src={require("../images/Grey/Group 414.png")} />Settings</p></Link>
         </aside>
 
-
-
         <main>
-          <div className='content'>
-            <div className="search-section">
-              <input className="search" type="text" placeholder="Search" style={{ display: this.state.showStore ? 'block' : 'none' }} />
-              <img className="search-icon" src={require("../images/search.png")} onClick={this.handleChangeStyle} />
-            </div>
-            <div className="user">
-              <div className="close-icon">
-                <img className="minimize" src={require("../images/minimize.png")} />
-                <img src={require("../images/close.png")} />
-              </div>
-              <p>
-                <img className="notification" src={require("../images/notification.png")} />
-                <span>Jessica Blume</span>
-                <img className="user-picture" src={require("../images/user.png")} />
-              </p>
-            </div>
-          </div>
 
-
+          <Hedaer />
           <div className='rubric'>Billing</div>
-          <Test isOpen={this.state.isModalOpen} onClose={this.closeModal} />
+          {/* <Modal isOpen={this.state.isModalOpen} onClose={this.closeModal} /> */}
           <div className="menu">
             <ul>
               <li>Name</li>
@@ -92,15 +72,12 @@ class Billing extends React.Component {
               <li>One Check</li>
               <li>Actions</li>
             </ul>
-
-
           </div>
-
           <div className='billing-element' >
             <div className='billing-icon'>
-              <img src={require("../images/folders.png")} />
+              <img className='folder' src={require('../images/folders.png')} />
             </div>
-            <div className="information">
+            <div className='information'>
               <ul className="info">
                 <li>Name</li>
                 <li>E-Mail@gmail.com</li>
@@ -108,74 +85,57 @@ class Billing extends React.Component {
                 <li>Ending in 1112</li>
               </ul>
             </div>
-            <div className="switch">
+            <div className='switch'>
               <Switch
                 onChange={this.handleChange}
                 checked={this.state.checked}
                 uncheckedIcon={false}
                 checkedIcon={false}
-                height={50}
+                height={55}
                 width={96}
                 onHandleColor='#16C8E4'
                 onColor="#182D43"
                 offColor="#182D43" />
             </div>
-            <div className="action-btn">
+            <div className='action-btn'>
               <button className="action-settings-btn"><img src={require('../images/settings-ligth.png')} /></button>
-              <button><img src={require("../images/play.svg")}></img></button>
+              <button className="action-play-btn"><img src={require("../images/play.svg")}></img></button>
               <button className="action-close-btn"><img src={require('../images/close-ligth.png')} /></button>
-
             </div>
-
-
-
           </div>
-
           <div className='billing-btn-icon'>
             <div className="btn">
               <button onClick={this.openModal}><img src={require("../images/plus.png")} /> <span className="mobile-view" >Create Profile</span></button>
               <button><img src={require('../images/trash.png')} /><span className="mobile-view" >Clear All Profile</span></button>
             </div>
-
           </div>
-
         </main>
-
-      </div>
-
-
+      </div >
     )
   }
-
 };
+
 export default Billing
 
-class Test extends React.Component {
+class Modal extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      count: 0,
       checked: false,
       checkedone: false,
-      checkedtwo: false
-
+      checkedtwo: false,
+      showgeneral: true,
+      showdelivery: false,
+      showpayment: false
     }
+
+    this.handleChangeGeneral = this.handleChangeGeneral.bind(this)
+    this.handleChangeDelivery = this.handleChangeDelivery.bind(this)
+    this.handleChangePayment = this.handleChangePayment.bind(this)
     this.handleChangeTwo = this.handleChangeTwo.bind(this)
     this.handleChangeOne = this.handleChangeOne.bind(this)
-    this.incrementCount = this.incrementCount.bind(this);
-    this.decrementCount = this.decrementCount.bind(this);
     this.handleChange = this.handleChange.bind(this)
-  }
-
-
-  incrementCount() {
-    this.setState(state => ({ count: state.count + 1 }));
-
-  }
-
-  decrementCount() {
-    this.setState(state => ({ count: state.count - 1 }))
   }
 
   handleChangeOne(checkedone) {
@@ -189,21 +149,48 @@ class Test extends React.Component {
   handleChangeTwo(checkedtwo) {
     this.setState({ checkedtwo })
   }
+
+  handleChangeGeneral() {
+    this.setState({
+      showgeneral:true,
+      showpayment: false,
+      showdelivery: false,
+    
+  })
+};
+
+  handleChangeDelivery() {
+    this.setState ({
+      showdelivery: true,
+      showgeneral: false,
+      showpayment: false,
+    });
+  }
+
+  handleChangePayment() {
+    this.setState ({
+      showdelivery: false,
+      showgeneral: false,
+      showpayment: true,
+    });
+  }
+
   render() {
-    const { isOpen, onClose, count } = this.props;
+    const { isOpen, onClose } = this.props;
 
     return (
       <div className={isOpen ? 'modal modal--is-open-billing' : 'modal'}>
         <div className='billing-payment'>
-          <button onClick=''>General</button>
-          <button onClick=''>Delivery</button>
-          <button onClick='' style={{ border: 'none' }}>Payment</button>
+          <button onClick={this.handleChangeGeneral} >General</button>
+          <button onClick={this.handleChangeDelivery}>Delivery</button>
+          <button onClick={this.handleChangePayment} style={{ border: 'none' }}>Payment</button>
         </div>
         <div className="close-icon">
           <img src={require("../images/close.png")} onClick={onClose} />
         </div><br /><br />
-        <div style={{ display: 'none' }}>
-          <input className='create-general' placeholder='General' disabled="true" />
+
+        <div style={{ display: this.state.showgeneral ? 'block' : 'none' }}>
+          <div className='create-general'>General</div>
           <input className="profile-name" placeholder='Profile Name' />
           <input className="email-address" placeholder='Email Address' />
           <input className="phone-number" placeholder='Phone Number' />
@@ -256,19 +243,19 @@ class Test extends React.Component {
               <p></p>
               <button className="save-btn">Save</button>
             </div>
-
           </div>
         </div>
 
-        <div style={{ display: 'none' }}>
-          <input className='create-general' placeholder='Delivery' disabled="true" />
+        <div style={{ display: this.state.showdelivery ? 'block' : 'none' }}>
+          <div className='create-general'>Delivery</div>
+
           <input className="first-name" placeholder='First Name' />
           <input className="last-name" placeholder='Last Name' />
           <input className="address-one" placeholder='Address 1' />
           <input className="address-two" placeholder='Address 2' />
           <input className="city" placeholder='City' />
           <input className="zip-code" placeholder='Zip Code' />
-          <select className="country select-decoration" placeholder='Country'>
+          <select className="country-select-decoration " placeholder='Country'>
             <option>United States</option>
             <option>Albania</option>
             <option>andorra</option>
@@ -279,30 +266,28 @@ class Test extends React.Component {
             <option>Belarus</option>
           </select>
           <button className="delivery-save-btn">Save</button>
-
-
         </div>
 
-        <div>
-          <input className='create-general' placeholder='Payment' disabled="true" />
+        <div style={{ display: this.state.showpayment ? 'block' : 'none' }}>
+          <div className='create-general'>Payment</div>
           <input className="card-number" placeholder='Card Number' />
-          <div  className='card-payment' style={{ display: 'flex' }}>
+          <div className='card-payment' style={{ display: 'flex' }}>
 
-          <select className="month select-decoration" placeholder='Country'>
-                <option>MM</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-                <option>07</option>
-                <option>08</option>
-                <option>09</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-              </select>
+            <select className="month select-decoration" placeholder='Country'>
+              <option>MM</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
 
             <select className="year select-decoration" placeholder='Country'>
               <option>YY</option>
@@ -322,16 +307,8 @@ class Test extends React.Component {
           </div>
           <button className=" payment-save save-btn">Save</button>
         </div>
-
-
-
-
-
       </div>
-    );
+    )
   }
+
 }
-
-
-
-
